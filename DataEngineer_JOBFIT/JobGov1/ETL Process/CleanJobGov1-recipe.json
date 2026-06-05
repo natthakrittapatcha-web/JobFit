@@ -1,0 +1,34 @@
+[
+  {
+    "Action": {
+      "Operation": "REMOVE_VALUES",
+      "Parameters": {
+        "sourceColumn": "province"
+      }
+    },
+    "ConditionExpressions": [
+      {
+        "Condition": "IS",
+        "Value": "[\"กรุงเทพและปริมณฑล\",\"ภาคเหนือ\",\"ภาคตะวันออกเฉียงเหนือ\",\"ภาคใต้\",\"ภาคตะวันตก\",\"ภาคตะวันออก\",\"สอบทหาร-ตำรวจ\",\"รัฐวิสาหกิจ\",\"ภาคกลาง\",\"บรรจุทั่วประเทศ\"]",
+        "TargetColumn": "province"
+      }
+    ]
+  },
+  {
+    "Action": {
+      "Operation": "FILL_WITH_LAST_VALID",
+      "Parameters": {
+        "columnDataType": "string",
+        "sourceColumn": "province"
+      }
+    }
+  },
+  {
+    "Action": {
+      "Operation": "REMOVE_MISSING",
+      "Parameters": {
+        "sourceColumn": "JobQualification1"
+      }
+    }
+  }
+]
